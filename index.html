@@ -109,15 +109,27 @@ table{width:100%;border-collapse:collapse;font-size:13px}th,td{text-align:left;p
 </main>
 <script>
 /* 1) Firebase 콘솔 > 프로젝트 설정 > 내 앱 > SDK 설정 및 구성에서 아래 값을 교체하세요. */
+// Import the functions you need from the SDKs you need
+
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_PROJECT.firebaseapp.com",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_PROJECT.appspot.com",
-  messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-  appId: "YOUR_APP_ID"
+  apiKey: "AIzaSyAzrUa4wSYSl3JNKld-JS-IqItPQxAeZK8",
+  authDomain: "lotte-pohang-expiry.firebaseapp.com",
+  projectId: "lotte-pohang-expiry",
+  storageBucket: "lotte-pohang-expiry.firebasestorage.app",
+  messagingSenderId: "352958387015",
+  appId: "1:352958387015:web:9bdf380aab1e93b8a13262",
+  measurementId: "G-C5507XVG7R"
 };
-let auth=null, db=null, currentUser=null, currentRole="staff", products=[], records=[];
+
+// Initialize Firebase
+let auth=null, db=null, currentUser=null, currentRole=null;
+
+
 const $=id=>document.getElementById(id);
 const say=(msg)=>{$("status").textContent=msg;};
 const clean=s=>String(s??"").trim();
